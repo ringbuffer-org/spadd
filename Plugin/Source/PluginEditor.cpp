@@ -38,7 +38,7 @@ PluginAudioProcessorEditor::PluginAudioProcessorEditor(
 
     brightnessSlider.setTextValueSuffix("");
     brightnessSlider.setTextBoxStyle(juce::Slider::TextBoxLeft, false, paramLabelWidth, paramControlHeight);
-    brightnessLabel.setText("Rolloff", juce::dontSendNotification);
+    brightnessLabel.setText("Brightness", juce::dontSendNotification);
     brightnessLabel.attachToComponent(&brightnessSlider, false);
     addAndMakeVisible(&brightnessLabel);
     addAndMakeVisible(&brightnessSlider);
