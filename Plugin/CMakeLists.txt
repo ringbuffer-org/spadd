@@ -1,6 +1,6 @@
 project(SpectroSpatialSynth VERSION 0.0.1)
 
-set (BaseTargetName SpectroSpatialSynthKFR)
+set (BaseTargetName SpectroSpatialSynth)
 
 juce_add_plugin("${BaseTargetName}"
         # VERSION ...                               # Set this if the plugin version is different to the project version
@@ -16,7 +16,7 @@ juce_add_plugin("${BaseTargetName}"
         PLUGIN_MANUFACTURER_CODE Juce
         PLUGIN_CODE Sssy
         FORMATS AU VST3 Standalone
-        PRODUCT_NAME "SpectroSpatialSynthKFR")
+        PRODUCT_NAME "SpectroSpatialSynth")
 
 target_sources(${BaseTargetName} PRIVATE
         Source/PluginProcessor.cpp
