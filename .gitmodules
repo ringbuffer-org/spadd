@@ -1,0 +1,6 @@
+[submodule "kfr"]
+	path = kfr
+	url = https://github.com/kfrlib/kfr.git
+[submodule "JUCE"]
+	path = JUCE
+	url = https://github.com/juce-framework/JUCE.git
