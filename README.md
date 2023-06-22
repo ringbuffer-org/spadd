@@ -1,4 +1,7 @@
-# Spectro Spatial Synth
+# SPAdd
+
+SPAdd is a VST-software synthesizer for spatial additive synthesis.
+
 ## Overview
 Spatial additive synthesis can be efficiently implemented by applying the inverse Fourier transform to create the individual channels of Ambisonics signals. This approach has been implemented as an audio plugin, allowing the generation of dynamic spatial waveforms in a typical music production context.
 
