@@ -6,7 +6,7 @@ SPAdd is a VST-software synthesizer for spatial additive synthesis.
 Spatial additive synthesis can be efficiently implemented by applying the inverse Fourier transform to create the individual channels of Ambisonics signals. This approach has been implemented as an audio plugin, allowing the generation of dynamic spatial waveforms in a typical music production context.
 
 ## Prerequisites
-* CMake 3.25 or newer for building
+* CMake 3.10 or newer for building
 * C++17 compatible standard C++ library
 * Clang 9+
 * Ninja (recommended for faster builds)
