@@ -20,7 +20,10 @@ VSCode with the CMake Tools Extension provides an easy way to build the targets.
 Otherwise have a look a the platform specific instructions below.
 
 ### Linux
-Use the CMake build and compile commands.
+Use the CMake build and compile commands. Make sure to install clang using your package manager and add the following defines to the cmake command line:
+```
+cmake -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang ...
+```
 
 ### Windows
 Generate a project for Visual Studio:
