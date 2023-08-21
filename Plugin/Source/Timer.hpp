@@ -26,6 +26,7 @@
 #include <iomanip>
 #include <chrono>
 #include <algorithm>
+#include <cmath>
 
 const int functionCount = 2000;
 
