@@ -6,7 +6,7 @@ SPAdd is a VST-software synthesizer for spatial additive synthesis.
 Spatial additive synthesis can be efficiently implemented by applying the inverse Fourier transform to create the individual channels of Ambisonics signals. This approach has been implemented as an audio plugin, allowing the generation of dynamic spatial waveforms in a typical music production context.
 
 ## Prerequisites
-* CMake 3.10 or newer for building
+* CMake 3.15 or newer
 * C++17 compatible standard C++ library
 * Clang 9+
 * Ninja (recommended for faster builds and mandatory for the default CMake Presets)
@@ -16,12 +16,20 @@ Clang is required at this moment due to KFR.
 
 CMake Presets provide an easy way to build the targets.
 
-For example on Windows run a x64 Native Tools Command Prompt or set the default parameters manually according to your VSCode version:
+For example on Windows run a x64 Native Tools Command Prompt or set the default parameters manually according to your Visual Studio version:
 ```
 "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat"
 ```
 
-For all platforms run
+Then use the platform specific presets, e.g. on Windows:
+```
+cmake --preset x64-Debug-ClangWindows
+```
+and
+```
+cmake --build --preset x64-Debug-ClangWindows-Build
+```
+or on Linux:
 ```
 cmake --preset x64-Debug-Clang
 ```
