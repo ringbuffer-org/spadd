@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.22)
 
 project(SpectroSpatialSynth)
 
 ######################### Compiler Settings ########################
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 
 ########################## Basic Settings ##########################
 ## First, we'll add the CMake folder, incase we'll need to find_package later:
@@ -46,7 +46,7 @@ set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 ##     JUCE manually 
 
 ## 1.) Adding JUCE locally by copying the whole JUCE Folder into the project folder
-add_subdirectory(JUCE)  
+#add_subdirectory(JUCE)  
 
 ## 2.) Using your installation of JUCE. 
 ## Make sure the JUCE install path is in the shell PATH variable 
@@ -54,7 +54,7 @@ add_subdirectory(JUCE)
 #find_package(JUCE CONFIG REQUIRED)
 
 ## 3.) Using the CPM package manager, see CMake/Findjuce.cmake
-#find_package(juce REQUIRED)
+find_package(juce REQUIRED)
 
 
 ########################## Custom Modules ##########################
@@ -68,4 +68,5 @@ add_subdirectory(Plugin)
 
 add_subdirectory(kfr)
 
-add_subdirectory(SNR)
+## Uncomment for benchmarks
+#add_subdirectory(SNR)
