@@ -6,10 +6,11 @@ SPAdd is a VST-software synthesizer for spatial additive synthesis.
 Spatial additive synthesis can be efficiently implemented by applying the inverse Fourier transform to create the individual channels of Ambisonics signals. This approach has been implemented as an audio plugin, allowing the generation of dynamic spatial waveforms in a typical music production context.
 
 ## Prerequisites
-* CMake 3.15 or newer
+* CMake 3.22 or newer
 * C++17 compatible standard C++ library
 * Clang 9+
 * Ninja (recommended for faster builds and mandatory for the default CMake Presets)
+* JUCE Dependencies on Linux: https://github.com/juce-framework/JUCE/blob/master/docs/Linux%20Dependencies.md
 
 ## Building
 Clang is required at this moment due to KFR.
@@ -23,22 +24,22 @@ For example on Windows run a x64 Native Tools Command Prompt or set the default 
 
 Then use the platform specific presets, e.g. on Windows:
 ```
-cmake --preset x64-Debug-ClangWindows
+cmake --preset x64-Release-ClangWindows
 ```
 and
 ```
-cmake --build --preset x64-Debug-ClangWindows-Build
+cmake --build --preset x64-Release-ClangWindows-Build
 ```
 or on Linux:
 ```
-cmake --preset x64-Debug-Clang
+cmake --preset x64-Release-Clang
 ```
 and
 ```
-cmake --build --preset x64-Debug-Clang-Build
+cmake --build --preset x64-Release-Clang-Build
 ```
 
-Otherwise have a look a the platform specific instructions below.
+Otherwise have a look at the platform specific instructions below or define your own CMake presets (https://cmake.org/cmake/help/v3.22/manual/cmake-presets.7.html)
 
 ### Linux
 Use the CMake build and compile commands. Make sure to install clang using your package manager and add the following defines to the cmake command line:
@@ -57,7 +58,7 @@ Generate a project for Xcode:
 cmake -G Xcode -B build
 ```
 ## Benchmarking
-For benchmarking the constants in PluginProcessor.h can be adjusted and the timer constructor has to be placed inside a scope together with the part of the code intended to be measured.
+Adjust the constants in PluginProcessor.h and place the timer constructor inside a scope with the code intended to be measured.
 
 ## Related Repositories
 This repository is based on Eyal Amir's "JUCE CMake Repo Prototype"
